@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ejecutar Docker después de copiar",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "Copiar y ejecutar Docker",
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "externalConsole": false
+    }
+  ]
+}

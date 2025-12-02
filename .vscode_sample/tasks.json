@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Copiar y ejecutar Docker",
+      "type": "shell",
+      "command": "echo Iniciando tarea...",
+      "dependsOn": ["copiar-carpetas", "docker-compose"],
+      "problemMatcher": []
+    },
+    {
+      "label": "copiar-carpetas",
+      "type": "shell",
+      "command": "Copy-Item -Path src -Destination ../allegro-tutorial-main/src -Recurse -Force; Copy-Item -Path static -Destination ../allegro-tutorial-main/static -Recurse -Force",
+      "problemMatcher": []
+    },
+    {
+      "label": "docker-compose",
+      "type": "shell",
+      "command": "cd ../allegro-tutorial-main; docker-compose build; docker-compose up",
+      "problemMatcher": []
+    },
+    {
+      "label": "Abrir carpeta DIST",
+      "type": "shell",
+      "command": "C:\\Windows\\explorer.exe ${workspaceFolder}\\..\\allegro-tutorial-main\\dist",
+      "problemMatcher": []
+    }
+  ]
+}
