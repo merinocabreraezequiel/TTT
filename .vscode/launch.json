@@ -2,23 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
+      "name": "Ejecutar Docker después de copiar",
       "type": "cppdbg",
       "request": "launch",
-      "args": [],
+      "preLaunchTask": "Copiar y ejecutar Docker",
+      "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "c:/xampp/htdocs/msdoscontent/TTT/src",
-      "program": "c:/xampp/htdocs/msdoscontent/TTT/src/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "externalConsole": false
     }
   ]
 }

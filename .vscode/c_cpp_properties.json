@@ -1,13 +1,18 @@
 {
   "configurations": [
     {
-      "name": "windows-gcc-x86",
+      "name": "Allegro AJGPP",
       "includePath": [
+        "${workspaceFolder}/allegro/include/**",
         "${workspaceFolder}/**"
       ],
-      "compilerPath": "C:/MinGW/bin/gcc.exe",
-      "cStandard": "${default}",
-      "cppStandard": "${default}",
+      "defines": [
+        "_DJGPP",
+        "ALLEGRO_STATICLINK"
+      ],
+      "compilerPath": "gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "gnu++17",
       "intelliSenseMode": "windows-gcc-x86",
       "compilerArgs": [
         ""

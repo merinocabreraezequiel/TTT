@@ -10,9 +10,9 @@ int main() {
     set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0);
 
     // Mostrar texto en pantalla
-    textout_centre_ex(screen, font, "Hello World - Allegro 4.2.3",
-                      SCREEN_W / 2, SCREEN_H / 2,
-                      makecol(255, 255, 255), -1);
+    textout_centre_ex(screen, font, "Hello World - Allegro 4.2.3 - from VSCode",
+                      SCREEN_W / 4, SCREEN_H / 4,
+                      makecol(2, 255, 7), -1);
 
     // Esperar a que el usuario presione una tecla
     readkey();
