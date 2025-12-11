@@ -2,7 +2,7 @@
 	"C_Cpp.intelliSenseEngine": "disabled",
 	"C_Cpp.default.includePath": [
 		"${workspaceFolder}/include",
-		"${workspaceFolder}/include/allegro"
+		"${workspaceFolder}/include/allegro/*"
 	],
 	"cmake.configureArgs": [
 		"-DCMAKE_MAKE_PROGRAM=${userHome}/.dos/ninja"

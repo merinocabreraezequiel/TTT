@@ -1,4 +1,4 @@
-#include <allegro/allegro.h>
+#include <allegro.h>
 
 void draw_vehicle(float vx, float vy, BITMAP *buffer);
 
