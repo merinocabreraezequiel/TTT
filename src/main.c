@@ -1,3 +1,4 @@
+#include "allegro/text.h"
 #include <allegro.h>
 
 void draw_vehicle(float vx, float vy, BITMAP *buffer);
@@ -29,6 +30,9 @@ int main() {
 		// Limpiar el buffer
 		clear_to_color(buffer, makecol(0, 0, 0));
 
+
+		//Texto en pantalla
+		textout_centre_ex(buffer, font, "TTT", 50, 10, makecol(255, 0, 0), 0x0000FF);
 		// Dibujar un rectángulo relleno con RGB
 		//rectfill(buffer, x1, y1, x2, y2, makecol(255, 0, 0));
 		/* Dibujar con hex
@@ -96,7 +100,7 @@ void draw_vehicle(float vx, float vy, BITMAP *buffer) {
 	line(buffer, vx + 10, vy - 5, vx + 20, vy - 5, makecol(255, 0, 255)); // ventanilla delantera 2
 	line(buffer, vx + 25, vy, vx + 15, vy - 10, makecol(255, 0, 255));    // ventanilla delantera 3
 
-	line(buffer, vx - 30, vy - 5, vx - 30, vy, makecol(0, 255, 255));// parachoques trasero
+	line(buffer, vx - 30, vy + 5, vx - 30, vy, makecol(0, 255, 255));// parachoques trasero
 
 	line(buffer, vx + 30, vy + 5, vx + 30, vy, makecol(128, 128, 128));// parachoques delantero 1
 	line(buffer, vx + 30, vy, vx + 25, vy, makecol(128, 128, 128));    // parachoques delantero 1
