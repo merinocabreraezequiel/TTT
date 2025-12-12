@@ -8,7 +8,7 @@
 * Visual Studio Code
 	** Download and install [website](https://code.visualstudio.com/download)
 
-* ext: dos-dev
+* ext: dos-dev [website](https://markeplace.visualstudio.com/items?itemName=badlogicgames.dos-dev)
 	** On VSC look for "dos-dev" extension and install it
 	** Ctrl+Shift+P
 	** DOS: Install Tools
