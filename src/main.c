@@ -1,4 +1,4 @@
-#include "allegro/text.h"
+//#include <stdio.h>
 #include <allegro.h>
 
 void draw_vehicle(float vx, float vy, BITMAP *buffer);
@@ -16,6 +16,16 @@ int main() {
 	// Buffer para dibujar
 	BITMAP *buffer = create_bitmap(320, 240);
 
+	// Cargar imagen de fondo
+	BITMAP *background = NULL;
+	const char *ruta_fondo = "static/fondob.bmp";
+
+	background = load_bitmap(ruta_fondo, NULL);
+
+	if (!background) {
+		allegro_message("Error: No se pudo cargar el archivo '%s'. Revisa la ruta y si el archivo existe.", ruta_fondo);
+		return 1;
+	}
 	// iniciarilzar coordenadas de un rectángulo
 	//int x1,x2,y1,y2;
 	//x1=0; x2=20; y1=0; y2=20;
@@ -53,17 +63,28 @@ int main() {
         if (y2 > 480) { y2 = 480; y1 = 480 - (y2 - y1); }
         */
 
-		//
+		// CONTROLES VEHÍCULO
 		if (key[KEY_RIGHT]) { vx += 2; }
 		if (key[KEY_LEFT]) { vx -= 2; }
 		if (vx < 0) { vx = 0; }
-		if (vx > 640) { vx = 640; }
+		if (vx > 320) { vx = 320; }
 
 		if (key[KEY_DOWN]) { vy += 2; }
 		if (key[KEY_UP]) { vy -= 2; }
 		if (vy < 0) { vy = 0; }
-		if (vy > 480) { vy = 480; }
+		if (vy > 240) { vy = 240; }
 
+		// Dibujar la imagen de fondo en el buffer
+		blit(
+				background,// BITMAP fuente (tu imagen de fondo)
+				screen,    // BITMAP destino (la pantalla visible)
+				0,         // X de la fuente (empezar en la esquina superior izquierda del fondo)
+				0,         // Y de la fuente (empezar en la esquina superior izquierda del fondo)
+				0,         // X de destino (dibujar en la esquina superior izquierda de la pantalla)
+				0,         // Y de destino (dibujar en la esquina superior izquierda de la pantalla)
+				320,       // Ancho del área a copiar (todo el ancho de la pantalla)
+				240        // Alto del área a copiar (todo el alto de la pantalla)
+		);
 		// Dibujar el vehículo en las coordenadas vx, vy
 		draw_vehicle(vx, vy, buffer);
 
