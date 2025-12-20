@@ -18,7 +18,7 @@ int main() {
 
 	// Cargar imagen de fondo
 	BITMAP *background = NULL;
-	const char *ruta_fondo = "static/fondob.bmp";
+	const char *ruta_fondo = "fondob.bmp";
 
 	background = load_bitmap(ruta_fondo, NULL);
 
