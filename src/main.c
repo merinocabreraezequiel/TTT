@@ -18,7 +18,7 @@ int main() {
 
 	// Cargar imagen de fondo
 	BITMAP *background = NULL;
-	const char *ruta_fondo = "fondob.bmp";
+	const char *ruta_fondo = "assets/backb.bmp";
 
 	background = load_bitmap(ruta_fondo, NULL);
 
@@ -72,7 +72,7 @@ int main() {
 		if (key[KEY_DOWN]) { vy += 2; }
 		if (key[KEY_UP]) { vy -= 2; }
 		if (vy < 0) { vy = 0; }
-		if (vy > 240) { vy = 240; }
+		if (vy > 200) { vy = 200; }
 
 		// Dibujar la imagen de fondo en el buffer
 		blit(
@@ -89,7 +89,7 @@ int main() {
 		draw_vehicle(vx, vy, buffer);
 
 		// Copiar el buffer a la pantalla
-		blit(buffer, screen, 0, 0, 0, 0, 320, 240);
+		blit(buffer, screen, 0, 0, 0, 0, 320, 200);
 		//bitmap, destino, sx, sy, dx, dy, w, h)
 
 		// Esperar un 20milisegundos
